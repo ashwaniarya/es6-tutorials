@@ -1,4 +1,4 @@
-##JavaScript Important Question
+#JavaScript Important Question
 
 Implementing Bing using Apply
 
