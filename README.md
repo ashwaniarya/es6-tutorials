@@ -1,6 +1,6 @@
 #JavaScript Important Question
 
-Implementing Bing using Apply
+Implementing Bind using Apply
 
 ```js
 Function.prototype.myBind = function(){
