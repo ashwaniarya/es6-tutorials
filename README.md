@@ -8,7 +8,6 @@ Function.prototype.myBind = function(){
   let restArgument = Array.from(arguments);
   restArgument.shift();
   let fn = this
-  console.log(fn);
   return function(){
     fn.apply(context,restArgument);
   }
