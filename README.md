@@ -21,3 +21,31 @@ function b(middleName, otherName){
 
 b.myBind();
 ```
+
+Custom reduce pollyfill 
+```js
+Array.prototype.myReduce = function(callbackFn,initialValue){
+  let self = this;
+  let prevValue = initialValue
+  for(let i = 0; i<self.length;i++){
+    let newValue = callbackFn(prevValue,self[i],i)
+    prevValue = newValue;
+  }
+  return prevValue;
+}
+```
+
+Custom filter pollyfill
+```js 
+Array.prototype.myfilter = function(callbackFn, thisArg){
+  let self = this;
+  let newArray = [];
+  for( let i = 0; i < self.length;i++){
+    if(Boolean(callbackFn(self[i],i))){
+      newArray.push(self[i]);
+    }
+  }
+
+  return newArray;
+}
+```
